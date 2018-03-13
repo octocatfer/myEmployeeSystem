@@ -1,0 +1,28 @@
+CREATE DATABASE sistema;
+USE sistema;
+
+CREATE TABLE empleados(
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  correo VARCHAR(100) NOT NULL,
+  nip CHAR(4) NOT NULL,
+  registro DATETIME NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE (correo)
+);
+
+INSERT INTO empleados (nombre, correo, nip, registro)
+VALUES
+('Ernesto', 'ernest@outlook.com', '4673', NOW()),
+('Isabel', 'isabel@outlook.com', '2031', NOW()),
+('Pablo', 'pablo@outlook.com', '2279', NOW());
+
+CREATE TABLE entradas (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  id_empleado INT(11) NOT NULL,
+  entrada DATETIME NOT NULL,
+  salida DATETIME DEFAULT NULL,
+  estado ENUM('E', 'S') NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id_empleado) REFERENCES empleados (id)
+);

@@ -1,0 +1,45 @@
+body {
+  font-family: Gill Sans MT, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  margin: 0 10%;
+}
+.fila {
+  border-collapse: collapse;
+}
+.columna {
+  display: table-cell;
+  border: 5px dotted #bcd5d1;
+  padding: 15px 20px;
+  min-width: 300px;
+}
+.columna h3 {
+  margin: 5px 0;
+}
+.titleLabel {
+  display: block;
+  font-size: 120%;
+  font-weight: 700;
+}
+.btn {
+  text-align: center;
+  padding: 10px 0;
+}
+#empleado {
+  width: 100%;
+  margin-top: 10px;
+}
+fieldset, #empleado {
+  border: 1px solid #aa863a;
+  border-radius: 2px;
+}
+#checar {
+  border: none;
+  border-radius: 3px;
+  background: #729f98;
+  padding: 0.5em 2em;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
